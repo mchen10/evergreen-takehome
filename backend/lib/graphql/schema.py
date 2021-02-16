@@ -3,7 +3,6 @@ from graphene import Mutation, ObjectType, InputObjectType, String, Schema
 from graphene_sqlalchemy import SQLAlchemyObjectType
 from models.vendor_model import VendorModel
 
-from db import db_session
 class Vendor(SQLAlchemyObjectType):
   class Meta:
     model = VendorModel
