@@ -1,7 +1,7 @@
 from sqlalchemy import Column, Integer, String
 
 from sqlalchemy.ext.declarative import declarative_base
-from backend.db import Base
+from db import Base
 
 class VendorModel(Base):
   __tablename__ = 'vendor'

@@ -1,5 +1,4 @@
 from backend.db import engine, db_session, Base
-from backend.models.user_model import UserModel
 from backend.models.vendor_model import VendorModel
 import csv
 
@@ -9,10 +8,6 @@ def init_db():
   # you will have to import them first before calling init_db()
   Base.metadata.drop_all(bind=engine)
   Base.metadata.create_all(bind=engine)
-
-  user = UserModel(first_name="Test", last_name="User")
-  db_session.add(user)
-
 
   with open('vendors.csv', 'r') as f:
     for i, line in enumerate(csv.reader(f)):
